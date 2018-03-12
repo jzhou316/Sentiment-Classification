@@ -77,7 +77,7 @@ def testing(test_iter, model):
             print('Testing --- iteration %d\n' %(test_iter.iterations))
         '''
         N_test += batch.batch_size
-        batch.text.volitile = True
+        batch.text.volatile = True
         output = model(batch)
         test_loss += loss_fnsum(output,
                                 2 - batch.label.type(torch.FloatTensor))
